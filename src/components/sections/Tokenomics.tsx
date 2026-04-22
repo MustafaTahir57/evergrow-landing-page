@@ -1,10 +1,10 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
-  { name: "USDT Rewards", value: 8, color: "oklch(0.78 0.22 155)" },
-  { name: "Liquidity", value: 4, color: "oklch(0.7 0.25 305)" },
-  { name: "Buyback & Burn", value: 1, color: "oklch(0.65 0.25 25)" },
-  { name: "Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
+  { name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)" },
+  { name: "Liquidity Pool", value: 4, color: "oklch(0.7 0.25 305)" },
+  { name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)" },
+  { name: "Dev / Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
 ];
 
 export function Tokenomics() {
