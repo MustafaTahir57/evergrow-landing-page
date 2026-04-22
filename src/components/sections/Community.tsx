@@ -27,10 +27,11 @@ export function Community() {
             Community
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Join the <span className="text-gradient-primary">EverGrow universe</span>
+            Join our <span className="text-gradient-primary">community</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Connect with thousands of holders across the galaxy.
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+            Extremely active community that loves our mission. Our Telegram group is filled
+            with community members and moderators that would love to help you 24/7.
           </p>
         </div>
 
