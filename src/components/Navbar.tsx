@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/evergrow-logo.png";
 
 const links = [
   { id: "about", label: "About" },
@@ -36,7 +37,11 @@ export function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 group"
         >
-          <div className="h-9 w-9 rounded-full bg-gradient-primary shadow-glow-purple animate-pulse-glow" />
+          <img
+            src={logo}
+            alt="EverGrow ($EGC) logo"
+            className="h-9 w-9 rounded-full shadow-glow-purple animate-pulse-glow"
+          />
           <span className="text-xl font-bold text-gradient-primary">EverGrow</span>
         </button>
 
