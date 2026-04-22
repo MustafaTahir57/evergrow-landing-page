@@ -15,24 +15,30 @@ export function Hero() {
           <span className="text-gradient-primary">with USD Reflections</span>
         </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Earn passive income in <span className="text-accent font-semibold">USDT</span>{" "}
-          just by holding $EGC. Real yield, automatic rewards, deflationary by design —
-          no staking, no claiming, no friction.
+        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          EverGrow works on an autonomous, frictionless yield farming and liquidity
+          generation protocol. Simply hold $EGC tokens in your wallet and earn passive
+          income in <span className="text-accent font-semibold">BEP20 USDT</span>.
+        </p>
+
+        <p className="mt-4 text-base md:text-lg text-foreground font-semibold">
+          Accumulating Wealth Was Never This Simple!
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={scrollToRewards}
+          <a
+            href="https://pancakeswap.finance/swap?outputCurrency=0xC001BBe2B87079294C63EcE98BdD0a88D761434e"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-xl bg-gradient-primary px-8 py-4 text-base font-bold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105"
           >
-            Buy $EGC Now
-          </button>
+            Buy from PancakeSwap
+          </a>
           <button
-            onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={scrollToRewards}
             className="rounded-xl border border-border bg-card/40 backdrop-blur px-8 py-4 text-base font-semibold text-foreground hover:bg-card/70 transition-colors"
           >
-            Learn More
+            Price Chart
           </button>
         </div>
 
