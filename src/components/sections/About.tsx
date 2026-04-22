@@ -13,18 +13,20 @@ export function About() {
 
         <div className="glass rounded-2xl p-8 md:p-12 shadow-card">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            <span className="text-foreground font-semibold">EverGrow Coin ($EGC)</span> is a
-            hyper-deflationary BEP-20 token on Binance Smart Chain that pays its holders
-            <span className="text-accent font-semibold"> real USDT rewards</span> on every
-            single transaction. Every buy, sell, and transfer triggers an automatic 8% tax,
-            of which the bulk is converted to USDT and distributed proportionally to all wallets
-            holding $EGC — no staking, no claiming, no gas-heavy interactions required.
+            <span className="text-foreground font-semibold">EverGrow Coin ($EGC)</span> works
+            on an autonomous, frictionless yield farming and liquidity generation protocol on
+            Binance Smart Chain. Simply hold $EGC tokens in your wallet and earn passive
+            income in <span className="text-accent font-semibold">BEP20 USDT</span> —
+            automatically delivered, no staking, no claiming required.
           </p>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            On top of that, a portion of every transaction goes toward an automatic
-            <span className="text-primary font-semibold"> buyback & burn</span> mechanism,
-            permanently shrinking the supply over time and giving long-term holders
-            compounding upside. Hold and grow — that's it.
+            Every buy, sell, and transfer triggers a transaction tax that fuels real-yield
+            USDT rewards for holders, deepens liquidity on PancakeSwap, and powers an
+            automatic <span className="text-primary font-semibold">buyback & burn</span>{" "}
+            mechanism that permanently shrinks supply over time.
+          </p>
+          <p className="mt-6 text-lg text-foreground font-semibold">
+            Accumulating Wealth Was Never This Simple!
           </p>
         </div>
       </div>

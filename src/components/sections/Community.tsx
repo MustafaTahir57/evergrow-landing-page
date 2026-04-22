@@ -5,14 +5,14 @@ const socials = [
   {
     name: "Telegram",
     href: "https://t.me/evergrowofficial",
-    desc: "Join 50,000+ holders chatting daily",
+    desc: "Join the discussion on Telegram",
     icon: telegramIcon,
     iconAlt: "Telegram logo",
   },
   {
     name: "X (Twitter)",
     href: "https://x.com/evergrowcoin",
-    desc: "Latest news, updates, and announcements",
+    desc: "Follow the latest updates on X",
     icon: xIcon,
     iconAlt: "X (Twitter) logo",
   },
@@ -27,10 +27,11 @@ export function Community() {
             Community
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Join the <span className="text-gradient-primary">EverGrow universe</span>
+            Join our <span className="text-gradient-primary">community</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Connect with thousands of holders across the galaxy.
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+            Extremely active community that loves our mission. Our Telegram group is filled
+            with community members and moderators that would love to help you 24/7.
           </p>
         </div>
 
@@ -59,10 +60,13 @@ export function Community() {
           ))}
         </div>
 
-        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-2">
           <p>© 2026 EverGrow Coin. $EGC is a BEP-20 token on Binance Smart Chain.</p>
-          <p className="mt-2 font-mono text-xs break-all">
-            Contract: 0xC001BBe2B87079294C63EcE98BdD0a88D761434e
+          <p className="font-mono text-xs break-all">
+            <span className="text-foreground/80">EGC Contract:</span> 0xC001BBe2B87079294C63EcE98BdD0a88D761434e
+          </p>
+          <p className="font-mono text-xs break-all">
+            <span className="text-foreground/80">USDT (BEP20) Contract:</span> 0x55d398326f99059fF775485246999027B3197955
           </p>
         </footer>
       </div>

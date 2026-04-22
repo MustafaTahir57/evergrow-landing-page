@@ -1,10 +1,10 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
-  { name: "USDT Rewards", value: 8, color: "oklch(0.78 0.22 155)" },
-  { name: "Liquidity", value: 4, color: "oklch(0.7 0.25 305)" },
-  { name: "Buyback & Burn", value: 1, color: "oklch(0.65 0.25 25)" },
-  { name: "Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
+  { name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)" },
+  { name: "Liquidity Pool", value: 4, color: "oklch(0.7 0.25 305)" },
+  { name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)" },
+  { name: "Dev / Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
 ];
 
 export function Tokenomics() {
@@ -20,9 +20,12 @@ export function Tokenomics() {
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="text-gradient-primary">14% transaction tax</span>, working for you
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Every buy and sell is taxed and redistributed to reward holders, deepen liquidity,
-            burn supply, and grow the ecosystem.
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+            EverGrow Coin is the next evolution of a reflection token on Binance Smart Chain —
+            the original USD reflection token built to maximize your earnings now and in the future.
+            Simply hold $EGC and get rewarded 8% in USDT from each transaction, automatically
+            delivered to your wallet. Any transaction between two wallets is taxed 14% by the
+            contract & distributed as rewards, liquidity, and buybacks.
           </p>
         </div>
 

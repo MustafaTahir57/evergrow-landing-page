@@ -119,12 +119,12 @@ export function RewardsDashboard() {
 
   const cards = stats
     ? [
-        { label: "$EGC Held", value: stats.egcHeld, accent: "primary" },
-        { label: "$ Value of EGC Held", value: stats.usdValue, accent: "accent" },
-        { label: "Total USDT Earned", value: stats.totalEarned, accent: "accent" },
-        { label: "Pending Rewards", value: stats.pending, accent: "primary" },
+        { label: "Your Wallet ($EGC)", value: stats.egcHeld, accent: "primary" },
+        { label: "$ Value of Wallet", value: stats.usdValue, accent: "accent" },
+        { label: "Total Earned (USDT)", value: stats.totalEarned, accent: "accent" },
+        { label: "Reward Not Claimed", value: stats.pending, accent: "primary" },
         {
-          label: "Total USDT Distributed (All Holders)",
+          label: "Reward Distributed To Holders",
           value: stats.totalDistributed,
           accent: "accent",
         },
@@ -139,11 +139,14 @@ export function RewardsDashboard() {
             Rewards Dashboard
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Check your <span className="text-gradient-primary">USDT rewards</span>
+            EverGrow <span className="text-gradient-primary">Rewards Dashboard</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Enter any BSC wallet address to see live $EGC holdings and USDT rewards earned.
-            Read-only — no wallet connection needed.
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+            Rewards are automatically sent every 60 minutes. It can, however, take longer
+            depending on your holdings and trading volume — rewards trigger once they are big
+            enough to cover gas fees. For smaller holders it may take from a couple of hours
+            to a few days. A small transaction (buy, sell or transfer) can trigger unclaimed
+            rewards.
           </p>
         </div>
 
