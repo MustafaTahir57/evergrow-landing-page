@@ -50,7 +50,7 @@ export function Tokenomics() {
                     borderRadius: "8px",
                     color: "oklch(0.97 0.01 280)",
                   }}
-                  formatter={(v: number) => `${v}%`}
+                  formatter={(v) => `${v}%`}
                 />
               </PieChart>
             </ResponsiveContainer>
