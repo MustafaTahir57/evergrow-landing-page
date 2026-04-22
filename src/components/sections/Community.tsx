@@ -5,14 +5,14 @@ const socials = [
   {
     name: "Telegram",
     href: "https://t.me/evergrowofficial",
-    desc: "Join 50,000+ holders chatting daily",
+    desc: "Join the discussion on Telegram",
     icon: telegramIcon,
     iconAlt: "Telegram logo",
   },
   {
     name: "X (Twitter)",
     href: "https://x.com/evergrowcoin",
-    desc: "Latest news, updates, and announcements",
+    desc: "Follow the latest updates on X",
     icon: xIcon,
     iconAlt: "X (Twitter) logo",
   },
