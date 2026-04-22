@@ -60,10 +60,13 @@ export function Community() {
           ))}
         </div>
 
-        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-2">
           <p>© 2026 EverGrow Coin. $EGC is a BEP-20 token on Binance Smart Chain.</p>
-          <p className="mt-2 font-mono text-xs break-all">
-            Contract: 0xC001BBe2B87079294C63EcE98BdD0a88D761434e
+          <p className="font-mono text-xs break-all">
+            <span className="text-foreground/80">EGC Contract:</span> 0xC001BBe2B87079294C63EcE98BdD0a88D761434e
+          </p>
+          <p className="font-mono text-xs break-all">
+            <span className="text-foreground/80">USDT (BEP20) Contract:</span> 0x55d398326f99059fF775485246999027B3197955
           </p>
         </footer>
       </div>
