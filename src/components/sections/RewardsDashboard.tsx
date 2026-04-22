@@ -119,12 +119,12 @@ export function RewardsDashboard() {
 
   const cards = stats
     ? [
-        { label: "$EGC Held", value: stats.egcHeld, accent: "primary" },
-        { label: "$ Value of EGC Held", value: stats.usdValue, accent: "accent" },
-        { label: "Total USDT Earned", value: stats.totalEarned, accent: "accent" },
-        { label: "Pending Rewards", value: stats.pending, accent: "primary" },
+        { label: "Your Wallet ($EGC)", value: stats.egcHeld, accent: "primary" },
+        { label: "$ Value of Wallet", value: stats.usdValue, accent: "accent" },
+        { label: "Total Earned (USDT)", value: stats.totalEarned, accent: "accent" },
+        { label: "Reward Not Claimed", value: stats.pending, accent: "primary" },
         {
-          label: "Total USDT Distributed (All Holders)",
+          label: "Reward Distributed To Holders",
           value: stats.totalDistributed,
           accent: "accent",
         },
