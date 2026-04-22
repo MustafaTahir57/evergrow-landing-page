@@ -1,20 +1,20 @@
 const reasons = [
   {
-    title: "8% USDT Rewards",
-    desc: "Earn real-yield in USDT on every single transaction. Rewards are distributed automatically — no staking, no claiming.",
+    title: "USDT Rewards",
+    desc: "All holders of $EGC earn an 8% reward from every Buy/Sell/Transfer in BEP20 USDT, automatically sent to your wallet.",
     icon: "💰",
     color: "accent",
   },
   {
-    title: "Buyback & Burn",
-    desc: "1% of every transaction fuels automatic buybacks and burns, permanently reducing supply and supporting price.",
+    title: "Multi Buy Back",
+    desc: "1% of every transaction is collected, converted to BNB, and used to buy $EGC from exchanges — those tokens are permanently removed from circulating supply, creating green candles on the price chart.",
     icon: "🔥",
     color: "primary",
   },
   {
-    title: "Deflationary Supply",
-    desc: "Total supply shrinks with every transaction. Scarcity goes up, your share of rewards goes up — forever.",
-    icon: "📉",
+    title: "Auto Liquidity",
+    desc: "4% of every transaction is transferred into the PancakeSwap liquidity pool to create a stable price floor and deepen tradeable liquidity over time.",
+    icon: "💧",
     color: "accent",
   },
 ];
@@ -28,8 +28,12 @@ export function WhyHodl() {
             Why HODL
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Three reasons to <span className="text-gradient-primary">hold forever</span>
+            Why hold <span className="text-gradient-primary">EverGrow Coin?</span>
           </h2>
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+            $EverGrow is a deflationary token designed to become more scarce over time —
+            funded by strategic buybacks and powered by automatic USDT reflections.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
