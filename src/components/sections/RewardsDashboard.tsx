@@ -139,11 +139,14 @@ export function RewardsDashboard() {
             Rewards Dashboard
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Check your <span className="text-gradient-primary">USDT rewards</span>
+            EverGrow <span className="text-gradient-primary">Rewards Dashboard</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Enter any BSC wallet address to see live $EGC holdings and USDT rewards earned.
-            Read-only — no wallet connection needed.
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+            Rewards are automatically sent every 60 minutes. It can, however, take longer
+            depending on your holdings and trading volume — rewards trigger once they are big
+            enough to cover gas fees. For smaller holders it may take from a couple of hours
+            to a few days. A small transaction (buy, sell or transfer) can trigger unclaimed
+            rewards.
           </p>
         </div>
 
