@@ -16,7 +16,7 @@ export function WhyHodl() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="glass rounded-2xl p-8 shadow-card">
             <div className="mb-4 flex items-center gap-3">
-              <img src={usdtLogo} alt="USDT logo" className="h-12 w-12" />
+              <img src={usdtLogo} alt="USDT logo" className="h-16 w-16" />
               <div className="text-5xl">💰</div>
             </div>
             <h3 className="text-2xl font-bold mb-3 text-accent">USDT Rewards</h3>

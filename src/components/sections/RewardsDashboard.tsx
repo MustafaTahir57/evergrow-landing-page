@@ -207,7 +207,7 @@ export function RewardsDashboard() {
                     {c.label}
                   </div>
                   {c.showUsdt && (
-                    <img src={usdtLogo} alt="USDT" className="h-6 w-6 shrink-0 opacity-90" />
+                    <img src={usdtLogo} alt="USDT" className="h-9 w-9 shrink-0 opacity-90" />
                   )}
                 </div>
                 <div
