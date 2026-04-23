@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import {useState, useCallback} from "react";
 import {
   createPublicClient,
   http,
@@ -6,9 +6,9 @@ import {
   isAddress,
   type Address,
 } from "viem";
-import { bsc } from "viem/chains";
-import { EGC_ABI, EGC_ADDRESS } from "@/lib/wagmi";
-import { DISTRIBUTOR_ABI } from "./distributorAbi";
+import {bsc} from "viem/chains";
+import {EGC_ABI, EGC_ADDRESS} from "@/lib/wagmi";
+import {DISTRIBUTOR_ABI} from "./distributorAbi";
 
 const client = createPublicClient({
   chain: bsc,
@@ -113,13 +113,13 @@ export function useRewardsData() {
           : 0;
 
       setStats({
-        egcHeld: formatNum(balanceNum, { maximumFractionDigits: 0 }),
+        egcHeld: formatNum(balanceNum, {maximumFractionDigits: 0}),
         usdValue: `$${formatNum(balanceNum * EGC_PRICE_USD, {
           maximumFractionDigits: 4,
         })}`,
-        totalEarned: `${formatNum(totalRealised, { maximumFractionDigits: 6 })} BNB`,
-        pending: `${formatNum(pending, { maximumFractionDigits: 6 })} BNB`,
-        totalDistributed: `${formatNum(totalDist, { maximumFractionDigits: 4 })} BNB`,
+        totalEarned: `${formatNum(totalRealised, {maximumFractionDigits: 6})} USDT`,
+        pending: `${formatNum(pending, {maximumFractionDigits: 6})} USDT`,
+        totalDistributed: `${formatNum(totalDist, {maximumFractionDigits: 4})} USDT`,
       });
     } catch (e) {
       const msg =
@@ -130,5 +130,7 @@ export function useRewardsData() {
     }
   }, []);
 
-  return { stats, loading, error, fetchRewards };
+  console.log("stats ", stats)
+
+  return {stats, loading, error, fetchRewards};
 }
