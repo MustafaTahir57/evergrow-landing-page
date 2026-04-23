@@ -112,7 +112,8 @@ export function useRewardsData(egcPriceUsd: number = FALLBACK_EGC_PRICE_USD) {
 
       setStats({
         egcHeld: formatNum(balanceNum, {maximumFractionDigits: 0}),
-        usdValue: `$${formatNum(balanceNum * EGC_PRICE_USD, {
+        usdValue: `$${formatNum(balanceNum * egcPriceUsd, {
+          minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         })}`,
         totalEarned: `$${formatNum(totalRealised, {minimumFractionDigits: 2, maximumFractionDigits: 2})} USDT`,
