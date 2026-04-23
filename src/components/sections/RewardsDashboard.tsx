@@ -1,11 +1,13 @@
 import {useState} from "react";
 import {useRewardsData} from "@/dataFetchers/useRewardsData";
+import {useEgcPrice} from "@/dataFetchers/useEgcPrice";
 import usdtLogo from "@/assets/usdt.png";
 import evergrowLogo from "@/assets/evergrow-logo.png";
 
 export function RewardsDashboard() {
   const [address, setAddress] = useState("");
-  const {stats, loading, error, fetchRewards} = useRewardsData();
+  const {price: egcPriceUsd} = useEgcPrice();
+  const {stats, loading, error, fetchRewards} = useRewardsData(egcPriceUsd);
 
   const placeholder = "—";
   const cards = [

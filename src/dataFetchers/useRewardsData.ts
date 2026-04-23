@@ -19,9 +19,7 @@ const client = createPublicClient({
 const DISTRIBUTOR_ADDRESS =
   "0xfbAb1D829e36EFbD13642229EAe2964004f38C41" as const;
 
-// Approximate $EGC price in USD — used for "$ Value of Wallet" display.
-// In production this would come from a price oracle / API.
-const EGC_PRICE_USD = 0.00000003;
+import {FALLBACK_EGC_PRICE_USD} from "./useEgcPrice";
 
 export type RewardsStats = {
   egcHeld: string;
@@ -38,7 +36,7 @@ function formatNum(n: number, opts?: Intl.NumberFormatOptions) {
   }).format(n);
 }
 
-export function useRewardsData() {
+export function useRewardsData(egcPriceUsd: number = FALLBACK_EGC_PRICE_USD) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<RewardsStats | null>(null);
@@ -114,7 +112,8 @@ export function useRewardsData() {
 
       setStats({
         egcHeld: formatNum(balanceNum, {maximumFractionDigits: 0}),
-        usdValue: `$${formatNum(balanceNum * EGC_PRICE_USD, {
+        usdValue: `$${formatNum(balanceNum * egcPriceUsd, {
+          minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         })}`,
         totalEarned: `$${formatNum(totalRealised, {minimumFractionDigits: 2, maximumFractionDigits: 2})} USDT`,
@@ -128,7 +127,7 @@ export function useRewardsData() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [egcPriceUsd]);
 
   console.log("stats ", stats)
 
