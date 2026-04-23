@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createPublicClient, http, formatUnits, isAddress, type Address } from "viem";
 import { bsc } from "viem/chains";
 import { EGC_ABI, EGC_ADDRESS } from "@/lib/wagmi";
+import usdtLogo from "@/assets/usdt.png";
 
 const client = createPublicClient({
   chain: bsc,

@@ -1,3 +1,5 @@
+import usdtLogo from "@/assets/usdt.png";
+
 export function Hero() {
   const scrollToRewards = () =>
     document.getElementById("rewards")?.scrollIntoView({ behavior: "smooth" });
@@ -49,12 +51,15 @@ export function Hero() {
 
         <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           {[
-            { v: "8%", l: "USDT Rewards" },
+            { v: "8%", l: "USDT Rewards", icon: usdtLogo },
             { v: "1%", l: "Buyback & Burn" },
             { v: "10%", l: "Total Tax" },
           ].map((s) => (
             <div key={s.l} className="glass rounded-xl p-4 md:p-6">
-              <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
+              <div className="flex items-center justify-center gap-2">
+                {s.icon && <img src={s.icon} alt="USDT" className="h-6 w-6 md:h-7 md:w-7" />}
+                <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
+              </div>
               <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
             </div>
           ))}

@@ -1,3 +1,5 @@
+import usdtLogo from "@/assets/usdt.png";
+
 export function WhyHodl() {
   return (
     <section id="why-hodl" className="relative py-24 px-6">
@@ -13,7 +15,10 @@ export function WhyHodl() {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="glass rounded-2xl p-8 shadow-card">
-            <div className="text-5xl mb-4">💰</div>
+            <div className="mb-4 flex items-center gap-3">
+              <img src={usdtLogo} alt="USDT logo" className="h-12 w-12" />
+              <div className="text-5xl">💰</div>
+            </div>
             <h3 className="text-2xl font-bold mb-3 text-accent">USDT Rewards</h3>
             <p className="text-muted-foreground leading-relaxed">
               $EverGrow is a deflationary token designed to become scarcer over time. All
