@@ -21,7 +21,7 @@ export function RewardsDashboard() {
       showUsdt: false,
     },
     {
-      label: "Total Earned (BNB)",
+      label: "Total Earned (USDT)",
       value: stats?.totalEarned ?? placeholder,
       accent: "accent",
       showUsdt: false,
