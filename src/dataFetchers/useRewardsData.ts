@@ -36,7 +36,7 @@ function formatNum(n: number, opts?: Intl.NumberFormatOptions) {
   }).format(n);
 }
 
-export function useRewardsData() {
+export function useRewardsData(egcPriceUsd: number = FALLBACK_EGC_PRICE_USD) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<RewardsStats | null>(null);
