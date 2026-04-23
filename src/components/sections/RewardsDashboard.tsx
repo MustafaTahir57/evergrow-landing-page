@@ -99,8 +99,8 @@ export function RewardsDashboard() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                   {c.label}
                 </div>
-                {c.showUsdt && (
-                  <img src={usdtLogo} alt="USDT" className="h-9 w-9 shrink-0 opacity-90" />
+                {c.logo && (
+                  <img src={c.logo} alt={c.logoAlt} className="h-9 w-9 shrink-0 opacity-90" />
                 )}
               </div>
               <div
