@@ -9,7 +9,7 @@ export function WhyHodl() {
             Why HODL?
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why HOLD <span className="text-gradient-primary">EverGROW?</span>
+            Why HOLD <span className="text-gradient-primary">EverGrow?</span>
           </h2>
         </div>
 
