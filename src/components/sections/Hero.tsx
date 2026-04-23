@@ -46,7 +46,7 @@ export function Hero() {
           {[
             { v: "8%", l: "USDT Rewards" },
             { v: "1%", l: "Buyback & Burn" },
-            { v: "100K+", l: "Holders" },
+            { v: "10%", l: "Total Tax" },
           ].map((s) => (
             <div key={s.l} className="glass rounded-xl p-4 md:p-6">
               <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>

@@ -117,19 +117,34 @@ export function RewardsDashboard() {
     }
   };
 
-  const cards = stats
-    ? [
-        { label: "Your Wallet ($EGC)", value: stats.egcHeld, accent: "primary" },
-        { label: "$ Value of Wallet", value: stats.usdValue, accent: "accent" },
-        { label: "Total Earned (USDT)", value: stats.totalEarned, accent: "accent" },
-        { label: "Reward Not Claimed", value: stats.pending, accent: "primary" },
-        {
-          label: "Reward Distributed To Holders",
-          value: stats.totalDistributed,
-          accent: "accent",
-        },
-      ]
-    : [];
+  const placeholder = "—";
+  const cards = [
+    {
+      label: "Your Wallet ($EGC)",
+      value: stats?.egcHeld ?? placeholder,
+      accent: "primary",
+    },
+    {
+      label: "$ Value of Wallet",
+      value: stats?.usdValue ?? placeholder,
+      accent: "accent",
+    },
+    {
+      label: "Total Earned (USDT)",
+      value: stats?.totalEarned ?? placeholder,
+      accent: "accent",
+    },
+    {
+      label: "Reward Not Claimed",
+      value: stats?.pending ?? placeholder,
+      accent: "primary",
+    },
+    {
+      label: "Reward Distributed To Holders",
+      value: stats?.totalDistributed ?? placeholder,
+      accent: "accent",
+    },
+  ];
 
   return (
     <section id="rewards" className="relative py-24 px-6">
@@ -173,9 +188,8 @@ export function RewardsDashboard() {
           )}
         </div>
 
-        {stats && (
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {cards.map((c) => (
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {cards.map((c) => (
               <div
                 key={c.label}
                 className={`glass rounded-2xl p-6 shadow-card border-l-4 ${
@@ -190,12 +204,11 @@ export function RewardsDashboard() {
                     c.accent === "accent" ? "text-accent" : "text-foreground"
                   }`}
                 >
-                  {c.value}
-                </div>
+                {c.value}
               </div>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

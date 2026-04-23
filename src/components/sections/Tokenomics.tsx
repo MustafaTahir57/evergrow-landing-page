@@ -2,7 +2,6 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
   { name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)" },
-  { name: "Liquidity Pool", value: 4, color: "oklch(0.7 0.25 305)" },
   { name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)" },
   { name: "Dev / Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
 ];
@@ -18,18 +17,17 @@ export function Tokenomics() {
             Tokenomics
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="text-gradient-primary">14% transaction tax</span>, working for you
+            <span className="text-gradient-primary">10% transaction tax</span>, working for you
           </h2>
           <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
-            EverGrow Coin is the next evolution of a reflection token on Binance Smart Chain —
-            the original USD reflection token built to maximize your earnings now and in the future.
-            Simply hold $EGC and get rewarded 8% in USDT from each transaction, automatically
-            delivered to your wallet. Any transaction between two wallets is taxed 14% by the
-            contract & distributed as rewards, liquidity, and buybacks.
+            EverGrow Coin is the next evolution of a reflection token on the Binance Smart
+            Chain (BSC): the original USD reflection token to maximize your earnings for
+            both now & the future. Simply hold $EGC tokens and get rewarded 8% in USDT from
+            each transaction, automatically delivered to your wallet.
           </p>
         </div>
 
-        <div className="glass rounded-2xl p-8 md:p-12 shadow-card grid md:grid-cols-2 gap-10 items-center">
+        <div className="glass rounded-2xl p-8 md:p-12 shadow-card grid md:grid-cols-2 gap-10 items-center mb-10">
           <div className="h-80 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -78,6 +76,24 @@ export function Tokenomics() {
                 <span className="text-2xl font-bold text-gradient-primary">{d.value}%</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="glass rounded-2xl p-8 shadow-card max-w-4xl mx-auto space-y-4">
+          <div className="flex gap-4">
+            <span className="text-2xl">•</span>
+            <p className="text-muted-foreground leading-relaxed">
+              <span className="text-foreground font-semibold">8% of every buy/sell/transfer</span>{" "}
+              is redistributed to all holders in USDT
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-2xl">•</span>
+            <p className="text-muted-foreground leading-relaxed">
+              <span className="text-foreground font-semibold">1% of every transaction</span>{" "}
+              is converted in $BNB, used to buy $EGC, and those tokens are destroyed forever!
+              This removes supply and creates green candles!
+            </p>
           </div>
         </div>
       </div>
