@@ -1,9 +1,9 @@
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import {PieChart, Pie, Cell, ResponsiveContainer, Tooltip} from "recharts";
 
 const data = [
-  { name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)" },
-  { name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)" },
-  { name: "Dev / Marketing", value: 1, color: "oklch(0.75 0.18 230)" },
+  {name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)"},
+  {name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)"},
+  {name: "Dev", value: 1, color: "oklch(0.75 0.18 230)"},
 ];
 
 export function Tokenomics() {
@@ -20,7 +20,7 @@ export function Tokenomics() {
             <span className="text-gradient-primary">10% transaction tax</span>, working for you
           </h2>
           <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
-            EverGrow Coin is the next evolution of a reflection token on the Binance Smart
+            EverGrow is the next evolution of a reflection token on the Binance Smart
             Chain (BSC): the original USD reflection token to maximize your earnings for
             both now & the future. Simply hold $EGC tokens and get rewarded 8% in USDT from
             each transaction, automatically delivered to your wallet.
@@ -69,7 +69,7 @@ export function Tokenomics() {
                 <div className="flex items-center gap-3">
                   <div
                     className="h-4 w-4 rounded-full"
-                    style={{ background: d.color, boxShadow: `0 0 12px ${d.color}` }}
+                    style={{background: d.color, boxShadow: `0 0 12px ${d.color}`}}
                   />
                   <span className="font-semibold text-foreground">{d.name}</span>
                 </div>

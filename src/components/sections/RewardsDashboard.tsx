@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { useRewardsData } from "@/dataFetchers/useRewardsData";
+import {useState} from "react";
+import {useRewardsData} from "@/dataFetchers/useRewardsData";
 import usdtLogo from "@/assets/usdt.png";
 
 export function RewardsDashboard() {
   const [address, setAddress] = useState("");
-  const { stats, loading, error, fetchRewards } = useRewardsData();
+  const {stats, loading, error, fetchRewards} = useRewardsData();
 
   const placeholder = "—";
   const cards = [
@@ -27,13 +27,13 @@ export function RewardsDashboard() {
       showUsdt: false,
     },
     {
-      label: "Reward Not Claimed (BNB)",
+      label: "Pending Rewards",
       value: stats?.pending ?? placeholder,
       accent: "primary",
       showUsdt: false,
     },
     {
-      label: "Reward Distributed To Holders (BNB)",
+      label: "Rewards",
       value: stats?.totalDistributed ?? placeholder,
       accent: "accent",
       showUsdt: false,
@@ -86,9 +86,8 @@ export function RewardsDashboard() {
           {cards.map((c) => (
             <div
               key={c.label}
-              className={`glass rounded-2xl p-6 shadow-card border-l-4 ${
-                c.accent === "accent" ? "border-l-accent" : "border-l-primary"
-              }`}
+              className={`glass rounded-2xl p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
+                }`}
             >
               <div className="flex items-center justify-between gap-2">
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
@@ -99,9 +98,8 @@ export function RewardsDashboard() {
                 )}
               </div>
               <div
-                className={`mt-3 text-2xl md:text-3xl font-extrabold break-all ${
-                  c.accent === "accent" ? "text-accent" : "text-foreground"
-                }`}
+                className={`mt-3 text-2xl md:text-3xl font-extrabold break-all ${c.accent === "accent" ? "text-accent" : "text-foreground"
+                  }`}
               >
                 {c.value}
               </div>

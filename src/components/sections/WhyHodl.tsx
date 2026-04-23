@@ -6,10 +6,10 @@ export function WhyHodl() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <div className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
-            Why HODL
+            Why HODL?
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why HOLD <span className="text-gradient-primary">EverGROW</span>
+            Why HOLD <span className="text-gradient-primary">EverGROW?</span>
           </h2>
         </div>
 
@@ -22,7 +22,7 @@ export function WhyHodl() {
             <h3 className="text-2xl font-bold mb-3 text-accent">USDT Rewards</h3>
             <p className="text-muted-foreground leading-relaxed">
               $EverGrow is a deflationary token designed to become scarcer over time. All
-              holders of EGC will earn an{" "}
+              holders of $EGC will earn an{" "}
               <span className="text-foreground font-semibold">8% reward</span> from every
               Buy/Sell/Transfer in BEP20 USDT, which is automatically sent to your wallets.
             </p>
