@@ -49,16 +49,16 @@ export function RewardsDashboard() {
   ];
 
   return (
-    <section id="rewards" className="relative py-24 px-6">
+    <section id="rewards" className="relative py-12 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Rewards Dashboard
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             EverGrow <span className="text-gradient-primary">Rewards Dashboard</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
             Rewards are automatically sent every 60 minutes. It can, however, take longer
             depending on your holdings and trading volume — rewards trigger once they are big
             enough to cover gas fees. For smaller holders it may take from a couple of hours
@@ -67,7 +67,7 @@ export function RewardsDashboard() {
           </p>
         </div>
 
-        <div className="glass rounded-2xl p-6 md:p-8 shadow-card max-w-3xl mx-auto">
+        <div className="glass rounded-2xl p-4 md:p-8 shadow-card max-w-3xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
@@ -75,12 +75,12 @@ export function RewardsDashboard() {
               onChange={(e) => setAddress(e.target.value.trim())}
               onKeyDown={(e) => e.key === "Enter" && fetchRewards(address)}
               placeholder="0x... wallet address"
-              className="flex-1 rounded-xl bg-input/60 border border-border px-5 py-4 text-foreground placeholder:text-muted-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="flex-1 rounded-xl bg-input/60 border border-border px-4 py-3 md:px-5 md:py-4 text-foreground placeholder:text-muted-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <button
               onClick={() => fetchRewards(address)}
               disabled={loading}
-              className="rounded-xl bg-gradient-primary px-8 py-4 font-semibold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl bg-gradient-primary px-6 py-3 md:px-8 md:py-4 font-semibold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading ? "Checking..." : "Check Rewards"}
             </button>
@@ -90,25 +90,25 @@ export function RewardsDashboard() {
           )}
         </div>
 
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
           {cards.map((c) => (
             <div
               key={c.label}
-              className={`glass rounded-2xl p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
+              className={`glass rounded-2xl p-4 md:p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
                 }`}
             >
-              <div className="flex items-center justify-between gap-2 min-h-9">
+              <div className="flex items-center justify-between gap-2 min-h-7 md:min-h-9">
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                   {c.label}
                 </div>
                 {c.logo ? (
-                  <img src={c.logo} alt={c.logoAlt} className="h-9 w-9 shrink-0 opacity-90" />
+                  <img src={c.logo} alt={c.logoAlt} className="h-7 w-7 md:h-9 md:w-9 shrink-0 opacity-90" />
                 ) : (
-                  <div className="h-9 w-9 shrink-0" aria-hidden="true" />
+                  <div className="h-7 w-7 md:h-9 md:w-9 shrink-0" aria-hidden="true" />
                 )}
               </div>
               <div
-                className={`mt-3 text-2xl md:text-3xl font-extrabold break-all ${c.accent === "accent" ? "text-accent" : "text-foreground"
+                className={`mt-2 md:mt-3 text-xl md:text-3xl font-extrabold break-all ${c.accent === "accent" ? "text-accent" : "text-foreground"
                   }`}
               >
                 {c.value}
