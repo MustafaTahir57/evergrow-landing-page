@@ -18,7 +18,12 @@ export function Hero() {
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
           EverGrow works on an autonomous, frictionless yield farming and liquidity
           generation protocol. Simply hold $EGC tokens in your wallet and earn passive
-          income in <span className="text-accent font-semibold">BEP20 USDT</span>.
+          income in{" "}
+          <span className="inline-flex items-center gap-1.5 align-middle text-accent font-semibold">
+            <img src={usdtLogo} alt="USDT" className="h-5 w-5 inline-block" />
+            BEP20 USDT
+          </span>
+          .
         </p>
 
         <p className="mt-4 text-base md:text-lg text-foreground font-semibold">
