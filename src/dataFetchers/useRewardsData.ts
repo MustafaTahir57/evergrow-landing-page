@@ -15,6 +15,10 @@ const client = createPublicClient({
   transport: http("https://bsc-dataseed.binance.org"),
 });
 
+// Hardcoded EverGrow dividend distributor on BSC.
+const DISTRIBUTOR_ADDRESS =
+  "0xfbAb1D829e36EFbD13642229EAe2964004f38C41" as const;
+
 // Approximate $EGC price in USD — used for "$ Value of Wallet" display.
 // In production this would come from a price oracle / API.
 const EGC_PRICE_USD = 0.00000003;
@@ -22,9 +26,9 @@ const EGC_PRICE_USD = 0.00000003;
 export type RewardsStats = {
   egcHeld: string;
   usdValue: string;
-  totalEarned: string; // shares[user].totalRealised (USDT)
-  pending: string; // getUnpaidEarnings(user) (USDT)
-  totalDistributed: string; // totalDistributed() (USDT)
+  totalEarned: string; // shares[user].totalRealised (BNB)
+  pending: string; // getUnpaidEarnings(user) (BNB)
+  totalDistributed: string; // totalDistributed() (BNB)
 };
 
 function formatNum(n: number, opts?: Intl.NumberFormatOptions) {
@@ -52,13 +56,8 @@ export function useRewardsData() {
     try {
       const addr = address as Address;
 
-      // 1) Resolve distributor address + EGC token meta from the EGC contract
-      const [distributorRes, balanceRes, decimalsRes] = await Promise.all([
-        client.readContract({
-          address: EGC_ADDRESS,
-          abi: EGC_ABI,
-          functionName: "distributorAddress",
-        }),
+      // 1) EGC token meta + user balance
+      const [balanceRes, decimalsRes] = await Promise.all([
         client.readContract({
           address: EGC_ADDRESS,
           abi: EGC_ABI,
@@ -72,7 +71,6 @@ export function useRewardsData() {
         }),
       ]);
 
-      const distributorAddress = distributorRes as Address;
       const balance = balanceRes as bigint;
       const decimals = Number(decimalsRes);
       const balanceNum = Number(formatUnits(balance, decimals));
@@ -80,25 +78,25 @@ export function useRewardsData() {
       // 2) Read reward stats from the distributor contract
       const [sharesRes, pendingRes, totalDistRes] = await Promise.allSettled([
         client.readContract({
-          address: distributorAddress,
+          address: DISTRIBUTOR_ADDRESS,
           abi: DISTRIBUTOR_ABI,
           functionName: "shares",
           args: [addr],
         }),
         client.readContract({
-          address: distributorAddress,
+          address: DISTRIBUTOR_ADDRESS,
           abi: DISTRIBUTOR_ABI,
           functionName: "getUnpaidEarnings",
           args: [addr],
         }),
         client.readContract({
-          address: distributorAddress,
+          address: DISTRIBUTOR_ADDRESS,
           abi: DISTRIBUTOR_ABI,
           functionName: "totalDistributed",
         }),
       ]);
 
-      // shares() returns [amount, totalExcluded, totalRealised] — USDT (18 decimals)
+      // shares() returns [amount, totalExcluded, totalRealised] — BNB (18 decimals)
       const totalRealised =
         sharesRes.status === "fulfilled"
           ? Number(formatUnits((sharesRes.value as readonly bigint[])[2], 18))
@@ -119,11 +117,9 @@ export function useRewardsData() {
         usdValue: `$${formatNum(balanceNum * EGC_PRICE_USD, {
           maximumFractionDigits: 4,
         })}`,
-        totalEarned: `$${formatNum(totalRealised, { maximumFractionDigits: 4 })}`,
-        pending: `$${formatNum(pending, { maximumFractionDigits: 4 })}`,
-        totalDistributed: `$${formatNum(totalDist, {
-          maximumFractionDigits: 0,
-        })}`,
+        totalEarned: `${formatNum(totalRealised, { maximumFractionDigits: 6 })} BNB`,
+        pending: `${formatNum(pending, { maximumFractionDigits: 6 })} BNB`,
+        totalDistributed: `${formatNum(totalDist, { maximumFractionDigits: 4 })} BNB`,
       });
     } catch (e) {
       const msg =
