@@ -1,7 +1,0 @@
-name = "evergrow-landing-page"
-main = "dist/server/index.js"
-compatibility_date = "2025-09-24"
-compatibility_flags = ["nodejs_compat"]
-
-[site]
-bucket = "./dist/client"
