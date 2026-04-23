@@ -95,12 +95,14 @@ export function RewardsDashboard() {
               className={`glass rounded-2xl p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
                 }`}
             >
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center justify-between gap-2 min-h-9">
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                   {c.label}
                 </div>
-                {c.logo && (
+                {c.logo ? (
                   <img src={c.logo} alt={c.logoAlt} className="h-9 w-9 shrink-0 opacity-90" />
+                ) : (
+                  <div className="h-9 w-9 shrink-0" aria-hidden="true" />
                 )}
               </div>
               <div
