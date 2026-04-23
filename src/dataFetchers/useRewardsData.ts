@@ -19,9 +19,7 @@ const client = createPublicClient({
 const DISTRIBUTOR_ADDRESS =
   "0xfbAb1D829e36EFbD13642229EAe2964004f38C41" as const;
 
-// Approximate $EGC price in USD — used for "$ Value of Wallet" display.
-// In production this would come from a price oracle / API.
-const EGC_PRICE_USD = 0.00000003;
+import {FALLBACK_EGC_PRICE_USD} from "./useEgcPrice";
 
 export type RewardsStats = {
   egcHeld: string;
