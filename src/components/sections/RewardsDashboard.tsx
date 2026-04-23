@@ -49,16 +49,16 @@ export function RewardsDashboard() {
   ];
 
   return (
-    <section id="rewards" className="relative py-24 px-6">
+    <section id="rewards" className="relative py-12 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Rewards Dashboard
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             EverGrow <span className="text-gradient-primary">Rewards Dashboard</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
             Rewards are automatically sent every 60 minutes. It can, however, take longer
             depending on your holdings and trading volume — rewards trigger once they are big
             enough to cover gas fees. For smaller holders it may take from a couple of hours
