@@ -124,26 +124,31 @@ export function RewardsDashboard() {
       label: "Your Wallet ($EGC)",
       value: stats?.egcHeld ?? placeholder,
       accent: "primary",
+      showUsdt: false,
     },
     {
       label: "$ Value of Wallet",
       value: stats?.usdValue ?? placeholder,
       accent: "accent",
+      showUsdt: false,
     },
     {
       label: "Total Earned (USDT)",
       value: stats?.totalEarned ?? placeholder,
       accent: "accent",
+      showUsdt: true,
     },
     {
       label: "Reward Not Claimed",
       value: stats?.pending ?? placeholder,
       accent: "primary",
+      showUsdt: true,
     },
     {
       label: "Reward Distributed To Holders",
       value: stats?.totalDistributed ?? placeholder,
       accent: "accent",
+      showUsdt: true,
     },
   ];
 
@@ -197,8 +202,13 @@ export function RewardsDashboard() {
                   c.accent === "accent" ? "border-l-accent" : "border-l-primary"
                 }`}
               >
-                <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
-                  {c.label}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                    {c.label}
+                  </div>
+                  {c.showUsdt && (
+                    <img src={usdtLogo} alt="USDT" className="h-6 w-6 shrink-0 opacity-90" />
+                  )}
                 </div>
                 <div
                   className={`mt-3 text-2xl md:text-3xl font-extrabold break-all ${
