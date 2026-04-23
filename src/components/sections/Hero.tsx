@@ -22,7 +22,7 @@ export function Hero() {
           generation protocol. Simply hold $EGC tokens in your wallet and earn passive
           income in{" "}
           <span className="inline-flex items-center gap-1.5 align-middle text-accent font-semibold">
-            <img src={usdtLogo} alt="USDT" className="h-5 w-5 inline-block" />
+            <img src={usdtLogo} alt="USDT" className="h-7 w-7 inline-block" />
             BEP20 USDT
           </span>
           .
@@ -57,7 +57,7 @@ export function Hero() {
           ].map((s) => (
             <div key={s.l} className="glass rounded-xl p-4 md:p-6">
               <div className="flex items-center justify-center gap-2">
-                {s.icon && <img src={s.icon} alt="USDT" className="h-6 w-6 md:h-7 md:w-7" />}
+                {s.icon && <img src={s.icon} alt="USDT" className="h-9 w-9 md:h-11 md:w-11" />}
                 <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
               </div>
               <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
