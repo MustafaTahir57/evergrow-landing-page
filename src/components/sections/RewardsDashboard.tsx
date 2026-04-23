@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useRewardsData} from "@/dataFetchers/useRewardsData";
 import usdtLogo from "@/assets/usdt.png";
+import evergrowLogo from "@/assets/evergrow-logo.png";
 
 export function RewardsDashboard() {
   const [address, setAddress] = useState("");
@@ -12,31 +13,36 @@ export function RewardsDashboard() {
       label: "Your Wallet ($EGC)",
       value: stats?.egcHeld ?? placeholder,
       accent: "primary",
-      showUsdt: false,
+      logo: evergrowLogo,
+      logoAlt: "EverGrow",
     },
     {
       label: "$ Value of Wallet",
       value: stats?.usdValue ?? placeholder,
       accent: "accent",
-      showUsdt: false,
+      logo: null,
+      logoAlt: "",
     },
     {
       label: "Total Earned (USDT)",
       value: stats?.totalEarned ?? placeholder,
       accent: "accent",
-      showUsdt: false,
+      logo: usdtLogo,
+      logoAlt: "USDT",
     },
     {
       label: "Pending Rewards",
       value: stats?.pending ?? placeholder,
       accent: "primary",
-      showUsdt: false,
+      logo: usdtLogo,
+      logoAlt: "USDT",
     },
     {
-      label: "Rewards",
+      label: "Total Rewards Distributed to Holders",
       value: stats?.totalDistributed ?? placeholder,
       accent: "accent",
-      showUsdt: false,
+      logo: usdtLogo,
+      logoAlt: "USDT",
     },
   ];
 
