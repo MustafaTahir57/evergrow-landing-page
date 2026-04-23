@@ -90,25 +90,25 @@ export function RewardsDashboard() {
           )}
         </div>
 
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
           {cards.map((c) => (
             <div
               key={c.label}
-              className={`glass rounded-2xl p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
+              className={`glass rounded-2xl p-4 md:p-6 shadow-card border-l-4 ${c.accent === "accent" ? "border-l-accent" : "border-l-primary"
                 }`}
             >
-              <div className="flex items-center justify-between gap-2 min-h-9">
+              <div className="flex items-center justify-between gap-2 min-h-7 md:min-h-9">
                 <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                   {c.label}
                 </div>
                 {c.logo ? (
-                  <img src={c.logo} alt={c.logoAlt} className="h-9 w-9 shrink-0 opacity-90" />
+                  <img src={c.logo} alt={c.logoAlt} className="h-7 w-7 md:h-9 md:w-9 shrink-0 opacity-90" />
                 ) : (
-                  <div className="h-9 w-9 shrink-0" aria-hidden="true" />
+                  <div className="h-7 w-7 md:h-9 md:w-9 shrink-0" aria-hidden="true" />
                 )}
               </div>
               <div
-                className={`mt-3 text-2xl md:text-3xl font-extrabold break-all ${c.accent === "accent" ? "text-accent" : "text-foreground"
+                className={`mt-2 md:mt-3 text-xl md:text-3xl font-extrabold break-all ${c.accent === "accent" ? "text-accent" : "text-foreground"
                   }`}
               >
                 {c.value}
