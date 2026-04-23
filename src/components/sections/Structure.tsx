@@ -20,7 +20,7 @@ export function Structure() {
               <p className="text-muted-foreground leading-relaxed">
                 The vast majority of the supply was airdropped to the original community —
                 circulating freely, generating rewards, and powering the deflationary engine on
-                every transaction. True community ownership, no whales, no hidden allocations.
+                every transaction. True community ownership.
               </p>
             </div>
           </div>
