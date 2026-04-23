@@ -21,22 +21,22 @@ export function RewardsDashboard() {
       showUsdt: false,
     },
     {
-      label: "Total Earned (USDT)",
+      label: "Total Earned (BNB)",
       value: stats?.totalEarned ?? placeholder,
       accent: "accent",
-      showUsdt: true,
+      showUsdt: false,
     },
     {
-      label: "Reward Not Claimed",
+      label: "Reward Not Claimed (BNB)",
       value: stats?.pending ?? placeholder,
       accent: "primary",
-      showUsdt: true,
+      showUsdt: false,
     },
     {
-      label: "Reward Distributed To Holders",
+      label: "Reward Distributed To Holders (BNB)",
       value: stats?.totalDistributed ?? placeholder,
       accent: "accent",
-      showUsdt: true,
+      showUsdt: false,
     },
   ];
 
