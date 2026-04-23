@@ -49,14 +49,13 @@ export function Hero() {
           </button>
         </div>
 
-        <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+        <div className="mt-16 grid grid-cols-2 gap-6 max-w-xl mx-auto">
           {[
             { v: "8%", l: "USDT Rewards", icon: usdtLogo },
             { v: "1%", l: "Buyback & Burn" },
-            { v: "10%", l: "Total Tax" },
           ].map((s) => (
-            <div key={s.l} className="glass rounded-xl p-4 md:p-6">
-              <div className="flex items-center justify-center gap-2">
+            <div key={s.l} className="glass rounded-xl p-4 md:p-6 flex flex-col items-center justify-center text-center">
+              <div className="flex items-center justify-center gap-2 h-11">
                 {s.icon && <img src={s.icon} alt="USDT" className="h-9 w-9 md:h-11 md:w-11" />}
                 <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
               </div>
