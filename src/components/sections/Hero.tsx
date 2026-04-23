@@ -1,3 +1,5 @@
+import usdtLogo from "@/assets/usdt.png";
+
 export function Hero() {
   const scrollToRewards = () =>
     document.getElementById("rewards")?.scrollIntoView({ behavior: "smooth" });
@@ -18,7 +20,12 @@ export function Hero() {
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
           EverGrow works on an autonomous, frictionless yield farming and liquidity
           generation protocol. Simply hold $EGC tokens in your wallet and earn passive
-          income in <span className="text-accent font-semibold">BEP20 USDT</span>.
+          income in{" "}
+          <span className="inline-flex items-center gap-1.5 align-middle text-accent font-semibold">
+            <img src={usdtLogo} alt="USDT" className="h-5 w-5 inline-block" />
+            BEP20 USDT
+          </span>
+          .
         </p>
 
         <p className="mt-4 text-base md:text-lg text-foreground font-semibold">
@@ -44,12 +51,15 @@ export function Hero() {
 
         <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           {[
-            { v: "8%", l: "USDT Rewards" },
+            { v: "8%", l: "USDT Rewards", icon: usdtLogo },
             { v: "1%", l: "Buyback & Burn" },
             { v: "10%", l: "Total Tax" },
           ].map((s) => (
             <div key={s.l} className="glass rounded-xl p-4 md:p-6">
-              <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
+              <div className="flex items-center justify-center gap-2">
+                {s.icon && <img src={s.icon} alt="USDT" className="h-6 w-6 md:h-7 md:w-7" />}
+                <div className="text-2xl md:text-3xl font-bold text-gradient-primary">{s.v}</div>
+              </div>
               <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
             </div>
           ))}
