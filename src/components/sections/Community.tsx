@@ -4,14 +4,14 @@ import xIcon from "@/assets/twitter-x.png";
 const socials = [
   {
     name: "Telegram",
-    href: "https://t.me/evergrowofficial",
+    href: "https://t.me/EverGrow_EGC",
     desc: "Join the discussion on Telegram",
     icon: telegramIcon,
     iconAlt: "Telegram logo",
   },
   {
     name: "X (Twitter)",
-    href: "https://x.com/evergrowcoin",
+    href: "https://x.com/EverGrowEGC_",
     desc: "Follow the latest updates on X",
     icon: xIcon,
     iconAlt: "X (Twitter) logo",
