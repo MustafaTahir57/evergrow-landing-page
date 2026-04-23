@@ -67,7 +67,7 @@ export function RewardsDashboard() {
           </p>
         </div>
 
-        <div className="glass rounded-2xl p-6 md:p-8 shadow-card max-w-3xl mx-auto">
+        <div className="glass rounded-2xl p-4 md:p-8 shadow-card max-w-3xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
@@ -75,12 +75,12 @@ export function RewardsDashboard() {
               onChange={(e) => setAddress(e.target.value.trim())}
               onKeyDown={(e) => e.key === "Enter" && fetchRewards(address)}
               placeholder="0x... wallet address"
-              className="flex-1 rounded-xl bg-input/60 border border-border px-5 py-4 text-foreground placeholder:text-muted-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="flex-1 rounded-xl bg-input/60 border border-border px-4 py-3 md:px-5 md:py-4 text-foreground placeholder:text-muted-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <button
               onClick={() => fetchRewards(address)}
               disabled={loading}
-              className="rounded-xl bg-gradient-primary px-8 py-4 font-semibold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl bg-gradient-primary px-6 py-3 md:px-8 md:py-4 font-semibold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading ? "Checking..." : "Check Rewards"}
             </button>
