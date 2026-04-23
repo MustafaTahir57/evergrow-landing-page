@@ -117,9 +117,9 @@ export function useRewardsData() {
         usdValue: `$${formatNum(balanceNum * EGC_PRICE_USD, {
           maximumFractionDigits: 4,
         })}`,
-        totalEarned: `${formatNum(totalRealised, {maximumFractionDigits: 6})} USDT`,
-        pending: `${formatNum(pending, {maximumFractionDigits: 6})} USDT`,
-        totalDistributed: `${formatNum(totalDist, {maximumFractionDigits: 4})} USDT`,
+        totalEarned: `${formatNum(totalRealised, {minimumFractionDigits: 2, maximumFractionDigits: 2})} USDT`,
+        pending: `${formatNum(pending, {minimumFractionDigits: 2, maximumFractionDigits: 2})} USDT`,
+        totalDistributed: `${formatNum(totalDist, {minimumFractionDigits: 2, maximumFractionDigits: 2})} USDT`,
       });
     } catch (e) {
       const msg =
