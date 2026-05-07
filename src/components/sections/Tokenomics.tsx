@@ -2,7 +2,8 @@ import {PieChart, Pie, Cell, ResponsiveContainer, Tooltip} from "recharts";
 
 const data = [
   {name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)"},
-  {name: "Buy Back + Burn", value: 1, color: "oklch(0.65 0.25 25)"},
+  {name: "Buy Back + Burn", value: 0.5, color: "oklch(0.65 0.25 25)"},
+  {name: "Auto Liquidity", value: 0.5, color: "oklch(0.78 0.18 280)"},
   {name: "Dev", value: 1, color: "oklch(0.75 0.18 230)"},
 ];
 
@@ -84,15 +85,23 @@ export function Tokenomics() {
             <span className="text-2xl">•</span>
             <p className="text-muted-foreground leading-relaxed">
               <span className="text-foreground font-semibold">8% of every buy/sell/transfer</span>{" "}
-              is redistributed to all holders in USDT
+              is redistributed to all holders in USDT.
             </p>
           </div>
           <div className="flex gap-4">
             <span className="text-2xl">•</span>
             <p className="text-muted-foreground leading-relaxed">
-              <span className="text-foreground font-semibold">1% of every transaction</span>{" "}
-              is converted in $BNB, used to buy $EGC, and those tokens are destroyed forever!
-              This removes supply and creates green candles!
+              <span className="text-foreground font-semibold">0.5% of every transaction</span>{" "}
+              is converted into $BNB and used to buy and permanently burn $EGC, reducing
+              supply over time.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-2xl">•</span>
+            <p className="text-muted-foreground leading-relaxed">
+              <span className="text-foreground font-semibold">0.5% of every transaction</span>{" "}
+              is automatically added to liquidity, helping support deeper liquidity and a
+              more stable trading environment.
             </p>
           </div>
         </div>
