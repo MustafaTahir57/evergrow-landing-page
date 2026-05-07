@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const CONTRACT = "0xC001BBe2B87079294C63EcE98BdD0a88D761434e";
+const CONTRACT = "0x527d8D6C47dd393D939fA32ee125C99A3e386A17";
 const PANCAKE_URL =
   "https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x527d8D6C47dd393D939fA32ee125C99A3e386A17";
 

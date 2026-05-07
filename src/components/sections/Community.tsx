@@ -1,5 +1,29 @@
+import {useState} from "react";
 import telegramIcon from "@/assets/telegram.svg";
 import xIcon from "@/assets/twitter-x.png";
+
+function CopyableContract({label, value}: {label: string; value: string}) {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {}
+  };
+  return (
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-2 font-mono text-xs">
+      <span className="text-foreground/80">{label}:</span>
+      <span className="break-all">{value}</span>
+      <button
+        onClick={copy}
+        className="rounded-md border border-border bg-card/40 px-2 py-1 text-[11px] font-semibold text-foreground hover:bg-card/70 transition-colors"
+      >
+        {copied ? "Copied!" : "Copy"}
+      </button>
+    </div>
+  );
+}
 
 const socials = [
   {
@@ -60,14 +84,10 @@ export function Community() {
           ))}
         </div>
 
-        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-2">
+        <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-3">
           <p>© 2026 EverGrow. $EGC is a BEP-20 token on Binance Smart Chain.</p>
-          <p className="font-mono text-xs break-all">
-            <span className="text-foreground/80">EGC Contract:</span> 0xC001BBe2B87079294C63EcE98BdD0a88D761434e
-          </p>
-          <p className="font-mono text-xs break-all">
-            <span className="text-foreground/80">USDT (BEP20) Contract:</span> 0x55d398326f99059fF775485246999027B3197955
-          </p>
+          <CopyableContract label="EGC Contract" value="0x527d8D6C47dd393D939fA32ee125C99A3e386A17" />
+          <CopyableContract label="USDT (BEP20) Contract" value="0x55d398326f99059fF775485246999027B3197955" />
         </footer>
       </div>
     </section>
