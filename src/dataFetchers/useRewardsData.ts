@@ -17,7 +17,7 @@ const client = createPublicClient({
 
 // Hardcoded EverGrow dividend distributor on BSC.
 const DISTRIBUTOR_ADDRESS =
-  "0xfbAb1D829e36EFbD13642229EAe2964004f38C41" as const;
+  "0x049F05827a5C63bc78857Fb4aaa4f6d8CB3482f6" as const;
 
 import {FALLBACK_EGC_PRICE_USD} from "./useEgcPrice";
 
