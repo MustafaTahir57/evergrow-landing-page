@@ -1,8 +1,6 @@
 import usdtLogo from "@/assets/usdt.png";
 
 export function Hero() {
-  const scrollToRewards = () =>
-    document.getElementById("rewards")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 bg-hero-gradient">
@@ -34,19 +32,21 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://pancakeswap.finance/swap?outputCurrency=0xC001BBe2B87079294C63EcE98BdD0a88D761434e"
+            href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x527d8D6C47dd393D939fA32ee125C99A3e386A17"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl bg-gradient-primary px-8 py-4 text-base font-bold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105"
           >
             Buy from PancakeSwap
           </a>
-          <button
-            onClick={scrollToRewards}
+          <a
+            href="https://www.dextools.io/app/bnb/pair-explorer/0x2dfe385b87b372ca5b3cd31735abe18289c5b861"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-xl border border-border bg-card/40 backdrop-blur px-8 py-4 text-base font-semibold text-foreground hover:bg-card/70 transition-colors"
           >
             Price Chart
-          </button>
+          </a>
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-6 max-w-xl mx-auto">
