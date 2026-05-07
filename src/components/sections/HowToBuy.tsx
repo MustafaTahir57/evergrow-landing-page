@@ -57,7 +57,7 @@ export function HowToBuy() {
               </div>
               <button
                 onClick={copy}
-                className="rounded-xl border border-border bg-card/40 backdrop-blur px-5 py-3 text-sm font-semibold text-foreground hover:bg-card/70 transition-colors"
+                className="cursor-pointer rounded-xl border border-border bg-card/40 backdrop-blur px-5 py-3 text-sm font-semibold text-foreground hover:bg-card/70 transition-colors"
               >
                 {copied ? "Copied!" : "Copy"}
               </button>
