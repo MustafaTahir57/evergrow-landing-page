@@ -1,7 +1,7 @@
 import {PieChart, Pie, Cell, ResponsiveContainer, Tooltip} from "recharts";
 
 const data = [
-  {name: "Reward to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)"},
+  {name: "Rewards to Holders (USDT)", value: 8, color: "oklch(0.78 0.22 155)"},
   {name: "Buy Back + Burn", value: 0.5, color: "oklch(0.65 0.25 25)"},
   {name: "Auto Liquidity", value: 0.5, color: "oklch(0.78 0.18 280)"},
   {name: "Dev", value: 1, color: "oklch(0.75 0.18 230)"},
