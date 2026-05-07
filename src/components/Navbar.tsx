@@ -4,6 +4,7 @@ import logo from "@/assets/evergrow-logo.png";
 const links = [
   { id: "about", label: "About" },
   { id: "rewards", label: "Rewards Dashboard" },
+  { id: "how-to-buy", label: "How To Buy" },
   { id: "why-hodl", label: "Why HODL" },
   { id: "tokenomics", label: "Tokenomics" },
   { id: "structure", label: "Structure" },

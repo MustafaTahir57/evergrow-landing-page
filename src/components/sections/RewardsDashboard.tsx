@@ -40,7 +40,7 @@ export function RewardsDashboard() {
       logoAlt: "USDT",
     },
     {
-      label: "Total Rewards Distributed to Holders",
+      label: "Rewards To Holders (USDT)",
       value: stats?.totalDistributed ?? placeholder,
       accent: "accent",
       logo: usdtLogo,
