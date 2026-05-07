@@ -17,7 +17,7 @@ function CopyableContract({label, value}: {label: string; value: string}) {
       <span className="break-all">{value}</span>
       <button
         onClick={copy}
-        className="rounded-md border border-border bg-card/40 px-2 py-1 text-[11px] font-semibold text-foreground hover:bg-card/70 transition-colors"
+        className="cursor-pointer rounded-md border border-border bg-card/40 px-2 py-1 text-[11px] font-semibold text-foreground hover:bg-card/70 transition-colors"
       >
         {copied ? "Copied!" : "Copy"}
       </button>
