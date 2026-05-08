@@ -20,7 +20,7 @@ export function RewardsDashboard() {
     },
     {
       label: "$ Value of Wallet",
-      value: stats?.usdValue ?? placeholder,
+      value: "TBH",
       accent: "accent",
       logo: null,
       logoAlt: "",
