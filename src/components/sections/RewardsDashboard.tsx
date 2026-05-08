@@ -20,7 +20,7 @@ export function RewardsDashboard() {
     },
     {
       label: "$ Value of Wallet",
-      value: "TBH",
+      value: stats ? "TBC" : placeholder,
       accent: "accent",
       logo: null,
       logoAlt: "",
@@ -36,13 +36,6 @@ export function RewardsDashboard() {
       label: "Pending Rewards",
       value: stats?.pending ?? placeholder,
       accent: "primary",
-      logo: usdtLogo,
-      logoAlt: "USDT",
-    },
-    {
-      label: "Rewards To Holders (USDT)",
-      value: stats?.totalDistributed ?? placeholder,
-      accent: "accent",
       logo: usdtLogo,
       logoAlt: "USDT",
     },
@@ -90,7 +83,7 @@ export function RewardsDashboard() {
           )}
         </div>
 
-        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5">
           {cards.map((c) => (
             <div
               key={c.label}

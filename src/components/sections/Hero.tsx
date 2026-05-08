@@ -1,6 +1,8 @@
 import usdtLogo from "@/assets/usdt.png";
+import {useTotalDistributed} from "@/dataFetchers/useTotalDistributed";
 
 export function Hero() {
+  const totalDistributed = useTotalDistributed();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 bg-hero-gradient">
@@ -29,6 +31,16 @@ export function Hero() {
         <p className="mt-4 text-base md:text-lg text-foreground font-semibold">
           Accumulating Wealth Was Never This Simple!
         </p>
+
+        <div className="mt-10 max-w-2xl mx-auto glass rounded-2xl p-6 md:p-8 shadow-glow-purple border border-primary/40">
+          <div className="text-xs md:text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center justify-center gap-2">
+            <img src={usdtLogo} alt="USDT" className="h-5 w-5 md:h-6 md:w-6" />
+            Total USDT Rewards Paid To Holders
+          </div>
+          <div className="mt-3 text-4xl md:text-6xl font-extrabold text-accent break-all">
+            ${totalDistributed ?? "—"} USDT
+          </div>
+        </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
