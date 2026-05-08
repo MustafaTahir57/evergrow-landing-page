@@ -20,7 +20,7 @@ export function RewardsDashboard() {
     },
     {
       label: "$ Value of Wallet",
-      value: "TBH",
+      value: stats ? "TBC" : placeholder,
       accent: "accent",
       logo: null,
       logoAlt: "",
@@ -36,13 +36,6 @@ export function RewardsDashboard() {
       label: "Pending Rewards",
       value: stats?.pending ?? placeholder,
       accent: "primary",
-      logo: usdtLogo,
-      logoAlt: "USDT",
-    },
-    {
-      label: "Rewards To Holders (USDT)",
-      value: stats?.totalDistributed ?? placeholder,
-      accent: "accent",
       logo: usdtLogo,
       logoAlt: "USDT",
     },
