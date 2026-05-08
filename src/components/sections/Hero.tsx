@@ -1,6 +1,8 @@
 import usdtLogo from "@/assets/usdt.png";
+import {useTotalDistributed} from "@/dataFetchers/useTotalDistributed";
 
 export function Hero() {
+  const totalDistributed = useTotalDistributed();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 bg-hero-gradient">
