@@ -83,7 +83,7 @@ export function RewardsDashboard() {
           )}
         </div>
 
-        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5">
           {cards.map((c) => (
             <div
               key={c.label}
