@@ -32,6 +32,16 @@ export function Hero() {
           Accumulating Wealth Was Never This Simple!
         </p>
 
+        <div className="mt-10 max-w-2xl mx-auto glass rounded-2xl p-6 md:p-8 shadow-glow-purple border border-primary/40">
+          <div className="text-xs md:text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center justify-center gap-2">
+            <img src={usdtLogo} alt="USDT" className="h-5 w-5 md:h-6 md:w-6" />
+            Total USDT Rewards Paid To Holders
+          </div>
+          <div className="mt-3 text-4xl md:text-6xl font-extrabold text-accent break-all">
+            ${totalDistributed ?? "—"} USDT
+          </div>
+        </div>
+
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x527d8D6C47dd393D939fA32ee125C99A3e386A17"
