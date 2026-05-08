@@ -13,7 +13,7 @@ export function RewardsDashboard() {
   const cards = [
     {
       label: "Your Wallet ($EGC)",
-      value: stats?.egcHeld ?? placeholder,
+      value: stats?.egcHeld ? `${stats.egcHeld} EGC` : placeholder,
       accent: "primary",
       logo: evergrowLogo,
       logoAlt: "EverGrow",
