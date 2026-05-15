@@ -9,6 +9,8 @@ export function RewardsDashboard() {
   const {price: egcPriceUsd} = useEgcPrice();
   const {stats, loading, error, fetchRewards} = useRewardsData(egcPriceUsd);
 
+  console.log("egcPriceUSD", egcPriceUsd)
+
   const placeholder = "—";
   const cards = [
     {

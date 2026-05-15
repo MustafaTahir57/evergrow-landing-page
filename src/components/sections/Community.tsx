@@ -9,7 +9,7 @@ function CopyableContract({label, value}: {label: string; value: string}) {
       await navigator.clipboard.writeText(value);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
-    } catch {}
+    } catch { }
   };
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-2 font-mono text-xs">
@@ -86,8 +86,8 @@ export function Community() {
 
         <footer className="mt-20 pt-8 border-t border-border text-center text-sm text-muted-foreground space-y-3">
           <p>© 2026 EverGrow. $EGC is a BEP-20 token on Binance Smart Chain.</p>
-          <CopyableContract label="EGC Contract" value="0x527d8D6C47dd393D939fA32ee125C99A3e386A17" />
-          <CopyableContract label="USDT (BEP20) Contract" value="0x55d398326f99059fF775485246999027B3197955" />
+          <CopyableContract label="EGC Contract" value="0xc3CC4dBF23055af2b87b5E2C85d3c197d04D9E72" />
+          <CopyableContract label="USDT (BEP20) Contract" value="0x0A824F570452B90F868902f36e6495aE70dcC019" />
         </footer>
       </div>
     </section>

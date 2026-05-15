@@ -44,7 +44,7 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x527d8D6C47dd393D939fA32ee125C99A3e386A17"
+            href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0xc3CC4dBF23055af2b87b5E2C85d3c197d04D9E72"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl bg-gradient-primary px-8 py-4 text-base font-bold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105"
@@ -52,7 +52,7 @@ export function Hero() {
             Buy from PancakeSwap
           </a>
           <a
-            href="https://www.dextools.io/app/bnb/pair-explorer/0x2dfe385b87b372ca5b3cd31735abe18289c5b861"
+            href="https://www.dextools.io/app/bnb/pair-explorer/0xce3ecb0d878e9ff0b6c37f137d506d50a711e10f"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-border bg-card/40 backdrop-blur px-8 py-4 text-base font-semibold text-foreground hover:bg-card/70 transition-colors"
@@ -63,8 +63,8 @@ export function Hero() {
 
         <div className="mt-16 grid grid-cols-2 gap-6 max-w-xl mx-auto">
           {[
-            { v: "8%", l: "USDT Rewards", icon: usdtLogo },
-            { v: "1%", l: "Buyback & Burn" },
+            {v: "8%", l: "USDT Rewards", icon: usdtLogo},
+            {v: "1%", l: "Buyback & Burn"},
           ].map((s) => (
             <div key={s.l} className="glass rounded-xl p-4 md:p-6 flex flex-col items-center justify-center text-center">
               <div className="flex items-center justify-center gap-2 h-11">

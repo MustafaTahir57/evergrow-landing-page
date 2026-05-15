@@ -2,7 +2,7 @@ import {useState} from "react";
 
 const CONTRACT = "0x527d8D6C47dd393D939fA32ee125C99A3e386A17";
 const PANCAKE_URL =
-  "https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x527d8D6C47dd393D939fA32ee125C99A3e386A17";
+  "https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0xc3CC4dBF23055af2b87b5E2C85d3c197d04D9E72";
 
 export function HowToBuy() {
   const [copied, setCopied] = useState(false);

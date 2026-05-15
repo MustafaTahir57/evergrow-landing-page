@@ -22,6 +22,8 @@ export function useEgcPrice() {
         const raw = json?.data?.attributes?.base_token_price_usd;
         const parsed = raw != null ? Number(raw) : NaN;
 
+        console.log("LivePrice", raw, parsed)
+
         if (!cancelled) {
           if (Number.isFinite(parsed) && parsed > 0) {
             setPrice(parsed);
