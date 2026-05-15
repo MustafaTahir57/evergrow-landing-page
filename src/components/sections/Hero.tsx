@@ -33,12 +33,13 @@ export function Hero() {
         </p>
 
         <div className="mt-10 max-w-2xl mx-auto glass rounded-2xl p-6 md:p-8 shadow-glow-purple border border-primary/40">
-          <div className="text-xs md:text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center justify-center gap-2">
-            <img src={usdtLogo} alt="USDT" className="h-5 w-5 md:h-6 md:w-6" />
+          <div className="text-xs md:text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center justify-center gap-2 text-center">
+            <img src={usdtLogo} alt="USDT" className="h-5 w-5 md:h-6 md:w-6 shrink-0" />
             Total USDT Rewards Paid To Holders
           </div>
-          <div className="mt-3 text-4xl md:text-6xl font-extrabold text-accent break-all">
-            ${totalDistributed ?? "—"} USDT
+          <div className="mt-3 font-extrabold text-accent whitespace-nowrap overflow-hidden text-[clamp(1.75rem,8vw,3.75rem)] leading-tight tabular-nums">
+            ${totalDistributed ?? "—"}{" "}
+            <span className="text-[0.7em]">USDT</span>
           </div>
         </div>
 
