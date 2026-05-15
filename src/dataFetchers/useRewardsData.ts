@@ -129,7 +129,5 @@ export function useRewardsData(egcPriceUsd: number = FALLBACK_EGC_PRICE_USD) {
     }
   }, [egcPriceUsd]);
 
-  console.log("stats ", stats)
-
   return {stats, loading, error, fetchRewards};
 }

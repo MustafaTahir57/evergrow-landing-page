@@ -9,7 +9,7 @@ const client = createPublicClient({
 });
 
 const DISTRIBUTOR_ADDRESS =
-  "0x049F05827a5C63bc78857Fb4aaa4f6d8CB3482f6" as const;
+  "0x0A824F570452B90F868902f36e6495aE70dcC019" as const;
 
 export function useTotalDistributed() {
   const [value, setValue] = useState<string | null>(null);
@@ -21,9 +21,10 @@ export function useTotalDistributed() {
         const res = await client.readContract({
           address: DISTRIBUTOR_ADDRESS,
           abi: DISTRIBUTOR_ABI,
-          functionName: "totalDistributed",
+          functionName: "totalDividends",
         });
         const num = Number(formatUnits(res as bigint, 18));
+
         if (!cancelled) {
           setValue(
             new Intl.NumberFormat("en-US", {

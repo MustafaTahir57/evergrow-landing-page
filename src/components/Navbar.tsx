@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import logo from "@/assets/evergrow-logo.png";
 
 const links = [
-  { id: "about", label: "About" },
-  { id: "rewards", label: "Rewards Dashboard" },
-  { id: "how-to-buy", label: "How To Buy" },
-  { id: "why-hodl", label: "Why HODL" },
-  { id: "tokenomics", label: "Tokenomics" },
-  { id: "structure", label: "Structure" },
-  { id: "community", label: "Community" },
+  {id: "about", label: "About"},
+  {id: "rewards", label: "Rewards Dashboard"},
+  {id: "how-to-buy", label: "How To Buy"},
+  {id: "why-hodl", label: "Why HODL"},
+  {id: "tokenomics", label: "Tokenomics"},
+  {id: "structure", label: "Structure"},
+  {id: "community", label: "Community"},
 ];
 
 export function Navbar() {
@@ -24,18 +24,17 @@ export function Navbar() {
 
   const scrollTo = (id: string) => {
     setOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({behavior: "smooth", block: "start"});
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-strong shadow-card" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong shadow-card" : "bg-transparent"
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}
           className="flex items-center gap-2 group"
         >
           <img
@@ -56,12 +55,14 @@ export function Navbar() {
               {l.label}
             </button>
           ))}
-          <button
-            onClick={() => scrollTo("rewards")}
+          <a
+            href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0xc3CC4dBF23055af2b87b5E2C85d3c197d04D9E72"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-2 rounded-lg bg-gradient-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-glow-purple transition-transform hover:scale-105"
           >
             Buy $EGC
-          </button>
+          </a>
         </div>
 
         <button
