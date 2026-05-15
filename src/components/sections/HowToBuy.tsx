@@ -12,14 +12,14 @@ export function HowToBuy() {
       await navigator.clipboard.writeText(CONTRACT);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
-    } catch {}
+    } catch { }
   };
 
   const steps = [
     "You'll need BEP-20 $BNB in your wallet on BNB Chain.",
     "Enter the EverGrow $EGC contract address in the \"To:\" or \"You Receive:\" box (see below).",
     "Set the slippage to at least 15% to allow for tax and volatility.",
-    "Don't forget to add the token to your wallet after you've successfully swapped.",
+    "Max transaction limit - Buy, Sell or Transfer - is 2.5 trillion $EGC (2,500,000,000,000).",
     "Tap the Buy from PancakeSwap button below to get straight there!",
   ];
 
