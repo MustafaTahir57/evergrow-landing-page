@@ -52,7 +52,7 @@ export function Hero() {
             Buy from PancakeSwap
           </a>
           <a
-            href="https://www.dextools.io/app/bnb/pair-explorer/0xce3ecb0d878e9ff0b6c37f137d506d50a711e10f"
+            href="https://dex.coinmarketcap.com/token/bsc/0xc3cc4dbf23055af2b87b5e2c85d3c197d04d9e72/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-border bg-card/40 backdrop-blur px-8 py-4 text-base font-semibold text-foreground hover:bg-card/70 transition-colors"
